@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.development.js"></script>
+  <title>Portal POC</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <div id="divRenderSurpriseOutsideReact"><button onclick="renderSurpriseOutsideReact()">Render surprise outside react</button></div>
+  <div id="portal"></div>
+  <script type="text/javascript">
+    const renderSurpriseOutsideReact = () => {
+      ReactDOM.render(React.createElement(MrBombasticContainer, null), document.getElementById("portal"));
+    }
+  </script>
+</body>
+
+</html>
